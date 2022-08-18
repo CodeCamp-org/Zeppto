@@ -1,0 +1,444 @@
+/*----------------------------------------*/
+/*BASIC SETUP*/
+/*----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'DM Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+}
+/*-------------------------------------------*/
+/*VARIABLES*/
+/*-------------------------------------------*/
+:root{
+   --primary-color:#4169e1;
+   --primary-text-color:#52596d;
+   --text-color: #191919;
+   --hover-color:#2c50bb;
+
+}
+/*-------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*-------------------------------------------*/
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section{
+    padding: 70px 0;
+}
+/*--------------------------------------------*/
+/*NAVBAR*/
+/*--------------------------------------------*/
+.navbarWrapper {
+    padding: 25px 0;
+}
+.navbarWrapper img {
+    display: block;
+    width: 100%;
+}
+nav.nav ul {
+    list-style: none;
+}
+
+nav.nav ul li a {
+    text-decoration: none;
+    display: block;
+    margin-right: 55px;
+    color: #222222;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: .3s;
+    position: relative;
+}
+nav.nav .actived {
+    color: var(--primary-color);
+}
+.appBtn {
+    background: var(--primary-color);
+    color: #fff !important;
+    padding: 14px 32px;
+    border-radius: 3px;
+    transition: .3s;
+}
+nav.nav ul li:hover a{
+    color:var(--primary-color);
+    transform: translateY(1px);
+
+}
+.appBtn:hover{
+    background-color:var(--hover-color);
+    color: #fff;   
+}
+nav.nav ul li a::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    background: var(--primary-color);
+    margin: auto;
+    transition: .3s;
+    
+}
+
+nav.nav ul li a:hover::after {
+    width: 100%;
+
+}
+nav.nav .appBtn::after {
+    width: 0% !important;  
+
+}
+nav.nav .appBtn{
+    transform: translateY(0px) !important;
+
+
+}
+nav.nav .appBtn{
+    margin-right: 0px !important;
+
+
+}
+/*---------------------------------------------*/
+/*HERO SECTION*/
+/*---------------------------------------------*/
+header.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+}
+.heroLeft {
+    flex-basis: 50%;
+}
+
+.heroRight {
+    flex-basis: 50%;
+}
+
+.heroRight img {
+    width: 100%;
+}
+.heroLeft h1 {
+    font-size: 58px;
+}
+.heroLeft h1 span {
+    background-image: url(../image/hero-highlight.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    padding: 0 30px;
+    margin-right: -30px;
+    margin-left: -30px;
+    
+}
+
+.heroLeft p {
+    font-size: 24px;
+    color: var(--primary-text-color);
+    max-width: 405px;
+    line-height: 40px;
+    margin: 40px 0;
+}
+.heroBtnWrapper {
+    justify-content: normal;
+}
+
+.heroBtnWrapper a {
+    display: block;
+    text-decoration: none;
+    padding: 0.85em 2.4em;
+}
+
+.heroBtnWrapper span {
+    margin: 0px 10px;
+}
+.heroBtnWrapper .heroLink {
+    padding: 0;
+    color: var(--text-color);
+    transition: .3s;
+}
+.heroBtnWrapper .heroLink:hover {
+    color:var(--primary-color)
+
+}
+/*--------------------------------------------*/
+/*OUR PARTNERS*/
+/*--------------------------------------------*/
+.partnersWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.singlePartners img {
+    width: 100px;
+}
+.partnersInfo{
+    color:var(--primary-text-color);
+    margin-top: 30px;
+}
+/*------------------------------------------*/
+/*DECLINED ORDERS*/
+/*------------------------------------------*/
+.sectionTitleLeft {
+    flex-basis: 50%;
+}
+
+.sectionTitleRight {
+    flex-basis: 50%;
+}
+
+.sectionTitleRight img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    margin-left: 100px;
+}
+.sectionTitleLeft h1 {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 400;
+}
+
+.sectionTitleLeft p {
+    margin: 48px 0;
+    color: var(--primary-text-color);
+    line-height: 45px;
+}
+
+section.declined-orders{
+    background-image: linear-gradient(270deg,#e9f1ff,rgba(243,248,255,0) 66%);
+}
+.declinedOrdersLeft a {
+    text-decoration: none;
+    display: inline-block;
+}
+/*---------------------------------------------------*/
+/*BENEFITS*/
+/*---------------------------------------------------*/
+.benefits{
+    background-image: linear-gradient(180deg,#f5faff,#fff);
+}
+.benefitsTitleWrap h2 {
+    font-size: 48px;
+    font-weight: 400;
+}
+.benefitsTitleWrap h5 {
+    font-size: 24px;
+    font-weight: 400;
+    width: 570px;
+    line-height: 38px;
+}
+
+.benefitsTitleWrap {
+    padding:120px 0 155px;
+}
+.singleBenefits {
+    flex-basis: 20%;
+    height: 308px;
+}
+
+.singleBenefits i {
+    font-size: 50px;
+    color: var(--primary-color);
+}
+
+.singleBenefits h5 {
+    font-size: 22px;
+    line-height: 32px;
+    margin: 22px 0 19px;
+    color: #191919;
+}
+
+.singleBenefits p {
+    color: var(--primary-text-color);
+    line-height: 28px;
+    padding-bottom: 70px;
+}
+/*-------------------------------------------------*/
+/*SET UP INSTANT RETRY*/
+/*-------------------------------------------------*/
+.instantRetryRight {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
+.instantRetryRight a {
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+    margin-top: 40px;
+    background-color: #191919;
+}
+
+.instantRetryLeft {
+    flex-basis: 50%;
+}
+.instantWrap {
+    background-color: var(--primary-color);
+    padding: 125px 0;
+    color: #fff;
+    border-radius: 0 16px 16px 0;
+}
+
+.instantRetryRight h4 {
+    font-weight: 400;
+    font-size: 24px;
+    width: 80%;
+    margin-bottom: 18px;
+}
+
+.instantRetryLeft h3 {
+    font-size: 48px;
+    font-weight: 300;
+    width: 75%;
+    z-index: 1;
+    position: relative;
+}
+section.instantRetry {
+    background: var(--primary-color);
+    background-image: linear-gradient(to right, var(--primary-color) 50%, #fff 50%);
+    padding: 0 !important;
+    margin: 70px 0;
+    position: relative;
+}
+.instantRetryOverLay img {
+    position: absolute;
+    top: -32px;
+    width: fit-content;
+    display: block;
+}
+/*---------------------------------------------------*/
+/*PAYMENT SECURITY*/
+/*---------------------------------------------------*/
+.paymentSecurityLeftContent img {
+    width: 500px;
+    display: block;
+}
+
+.paymentSecurityRightContent h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+.paymentSecurityRightContent ul {
+    list-style: none;
+}
+
+.paymentSecurityRightContent li {
+    font-size: 24px;
+    line-height: 55px;
+    color: var(--primary-text-color);
+}
+
+.paymentSecurityRightContent ul li i {
+    font-size: 24px;
+    color: var(--primary-color);
+    background-color: #4169e126;
+    border-radius: 50%;
+    margin-right: 22px;
+}
+/*--------------------------------------------------------*/
+/*PAYMENT PLATFORMS*/
+/*-------------------------------------------------------*/
+.payment-platforms-right-content {
+    max-width: 488px;
+}
+
+.payment-platforms-left-content {
+    max-width: 460px;
+}
+
+.singlePaymentPlatforms img {
+    width: 120px;
+    margin-top: 60px;
+}
+.paymentPlatforsWrapper {
+    display: grid;
+    grid-column-gap: 160px;
+    grid-template-columns: 1fr 1fr;
+}
+/*--------------------------------------------------------*/
+/*F&Q*/
+/*--------------------------------------------------------*/
+.faq-title h1 {
+    font-size: 48px;
+    font-weight: 300;
+    padding: 65px 0;
+}
+.faq-services h3 {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 45px 0;
+    color: var(--text-color);
+}
+
+.faq-services {
+    border-bottom: 1px solid #dddddd9e;
+}
+
+.faq-services i {
+    font-size: 12px;
+}
+.faq-wrapper {
+    margin: 0px 75px;
+}
+/*-------------------------------------------------*/
+/*FOOTER*/
+/*------------------------------------------------*/
+section.footer {
+    background-color: #191919;
+    color: #fff;
+}
+
+.footerLogo img {
+    display: block;
+    width: fit-content;
+}
+
+.footer-top-wrap {
+    padding: 60px 0;
+    border-bottom: 1px solid #52596dab;
+}
+
+.footer-mail {
+    color: hsla(0,0%,100%,.5);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+.footer-mail-wrap a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-address-title {
+    color: hsla(0,0%,100%,.5);
+}
+
+.footerAddressWrap {
+    line-height: 27px;
+    margin-left: -480px
+}
+.foooterBtn a {
+    text-decoration: none;
+    color: #fff;
+}
